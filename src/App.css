@@ -1,5 +1,7 @@
 .App {
   text-align: center;
+  height: 800px;
+  /*background-image: url('https://images.pexels.com/photos/209831/pexels-photo-209831.jpeg?auto=compress&cs=tinysrgb&w=600');*/
 }
 
 .App-logo {
@@ -35,4 +37,21 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+
+input{
+  width: 400px;
+  height: 30px;
+  border-radius: 5px;
+  border: 2px outset black;
+  margin-bottom: 20px;
+  padding: 10px;
+  font-weight: bold;
+  font-size: large;
+}
+
+.day{
+  content: url("./IconFiles/icons8-clouds-48.png");
+  
 }
