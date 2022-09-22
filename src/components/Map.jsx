@@ -7,8 +7,8 @@ export function Map() {
 
     return  <iframe
     title="weather"
-   width="500"
-    height="340"
+   width="800"
+    height="400"
     id="gmap_canvas"
     src={`https://maps.google.com/maps?q=${city}&t=&z=13&ie=UTF8&iwloc=&output=embed`}
    frameBorder="0"
