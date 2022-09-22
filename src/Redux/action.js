@@ -1,6 +1,7 @@
 export const UPDATE_CITY = "UPDATE_CITY"
 export const COORDINATES = "COORDINATES"
 export const FORECAST =    "FORECAST"
+export const HOURLY =    "HOURLY"
 
 export const updateCity = (payload) =>{
     return {
@@ -20,6 +21,13 @@ export const coordinates = (payload) =>{
 export const forecast = (payload) =>{
     return {
         type: FORECAST,
+       payload,
+    }
+}
+
+export const hourly = (payload) =>{
+    return {
+        type: HOURLY,
        payload,
     }
 }
