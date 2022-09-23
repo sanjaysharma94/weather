@@ -6,10 +6,11 @@ import axios from "axios"
 import { useDispatch , useSelector } from "react-redux"
 import { Slider } from './components/Corousel'
 import { useState } from 'react'
-import { forecast ,hourly,updateCity} from './Redux/action'
+import { current, forecast ,hourly,updateCity} from './Redux/action'
 import { coordinates } from "./Redux/action"
 import {Map} from "./components/Map"
 import {TempArea} from "./components/TempArea"
+import {SunRise} from "./components/SunRiseSet"
 
 function App() {
 
@@ -43,12 +44,17 @@ let Id = useRef();
      {  axios.get(`https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=2d9c313e67589677085ed508b96ae174`)
         .then((r)=>{
           
+
+          
           
           const lat =  r.data.coord.lat
          
           const lng =  r.data.coord.lon
-          
 
+          const sunrise = r.data.sys.sunrise;
+          const sunset = r.data.sys.sunset;
+          
+          dispatch(current([sunrise,sunset]))
           dispatch(coordinates({lat,lng}))
               
         })
@@ -72,6 +78,7 @@ let Id = useRef();
       
       axios.get(`https://api.openweathermap.org/data/2.5/onecall?lat=${latitude.current}&lon=${longitude.current}&units=metric&exclude=minutely,alerts&appid=08f94d62d8b644853264d64f72bedf08`)
        .then((r)=>{
+        console.log(r.data.current)
         dispatch(hourly(r.data.hourly))
         dispatch(forecast(r.data.daily))
        
@@ -103,6 +110,7 @@ let Id = useRef();
     <Slider></Slider>
     
     <TempArea/>
+    <SunRise/>
     <Map/>
     
         
