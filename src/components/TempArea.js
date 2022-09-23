@@ -59,7 +59,7 @@ export function TempArea() {
 
   const  hourlydata = useSelector((store)=>store.credential.hourly)
 
-const temp = hourlydata.slice(0,5)
+const temp = hourlydata.slice(0,9)
 const labels = temp.map((e)=>time1(e.dt))
 const data = {
   labels,
@@ -74,7 +74,9 @@ const data = {
   ],
 };
 
-  return  <div style={{ margin:"auto", height:"400px", width:"800px"}} ><Line 
+  return  <div style={{ margin:"auto", height:"400px", width:"800px" ,marginTop:"10px", marginBottom:"70px"}} >
+    <h1 >{temp[0]?.temp}</h1>
+    <Line 
      options={options} data={data} />;
      </div> 
 }
