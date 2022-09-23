@@ -1,6 +1,6 @@
 .App {
   text-align: center;
-  height: 800px;
+  height: 1000px;
   background-color: "blue";
 }
 
@@ -51,7 +51,4 @@ input{
   font-size: large;
 }
 
-.day{
-  content: url("./IconFiles/icons8-clouds-48.png");
-  
-}
+
