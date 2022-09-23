@@ -23,14 +23,14 @@ let time = (tm)=>{
 
     
   return (
-    <div style={{ margin:"auto",  display:"flex", gap:"20px", flexFlow:'nowrap', width:"46%",overflowX:"scroll"}} >
+    <div style={{ margin:"auto",  display:"flex", gap:"20px", flexFlow:'nowrap', width:"50%",overflowX:"scroll"}} >
       
         {data.map((e) => (
           <div
             key={e.dt}
             style={{
               border: "dotted black",
-              width: "100px",
+              minWidth: "100px",
               height: "150px",
               
             }}
@@ -41,7 +41,7 @@ let time = (tm)=>{
             <img 
             src= {e.weather[0].main==="Clear"?sun : e.weather[0].main==="Rain" ? rain :cloud}
               style={{
-                width: "100%",
+                width: "80%",
                 height: "50%",
                 marginTop: 0,
                 marginBottom: 0

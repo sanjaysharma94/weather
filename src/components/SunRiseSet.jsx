@@ -82,8 +82,8 @@ export function SunRise() {
 
   return  <div style={{ margin:"auto", height:"400px", width:"800px" ,marginTop:"10px", marginBottom:"170px"}} >
     <div style={{display:"flex", justifyContent:"space-between" }}>
-    <div><h1>Sunrise</h1>{ currentdata[0] && <h1>{time2(currentdata[0])}</h1>}</div>
-    <div><h1>Sunset</h1>{currentdata[1] && <h1 >{time2(currentdata[1])}</h1>}</div>
+    <div><h2>Sunrise</h2>{ currentdata[0] && <h2>{time2(currentdata[0])}</h2>}</div>
+    <div><h2>Sunset</h2>{currentdata[1] && <h2>{time2(currentdata[1])}</h2>}</div>
     </div>
     {<Line options={options} data={data} />} ;
       </div> 

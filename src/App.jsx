@@ -78,7 +78,7 @@ let Id = useRef();
       
       axios.get(`https://api.openweathermap.org/data/2.5/onecall?lat=${latitude.current}&lon=${longitude.current}&units=metric&exclude=minutely,alerts&appid=08f94d62d8b644853264d64f72bedf08`)
        .then((r)=>{
-        console.log(r.data.current)
+        
         dispatch(hourly(r.data.hourly))
         dispatch(forecast(r.data.daily))
        

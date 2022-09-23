@@ -77,9 +77,9 @@ const data = {
 
   return  <div style={{ margin:"auto", height:"400px", width:"800px" ,marginTop:"10px", marginBottom:"170px"}} >
     <div style={{display:"flex", justifyContent:"space-between" }}>
-    <div><h1>Pressure</h1>
-    <h1>{temp[0]?.pressure}</h1></div><div><h1>Humidity</h1>
-    <h1 >{temp[0]?.humidity}</h1></div>
+    <div><h2>Pressure</h2>
+    <h2>{temp[0]?.pressure}</h2></div><div><h2>Humidity</h2>
+    <h2 >{temp[0]?.humidity}</h2></div>
     </div>
     <Line 
      options={options} data={data} />;
