@@ -1,4 +1,5 @@
 export const UPDATE_CITY = "UPDATE_CITY"
+export const CURRENT = "CURRENT"
 export const COORDINATES = "COORDINATES"
 export const FORECAST =    "FORECAST"
 export const HOURLY =    "HOURLY"
@@ -30,4 +31,10 @@ export const hourly = (payload) =>{
         type: HOURLY,
        payload,
     }
+}
+    export const current = (payload) =>{
+        return {
+            type: CURRENT,
+           payload,
+        }
 }
