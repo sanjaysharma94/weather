@@ -58,6 +58,7 @@ export function TempArea() {
   };
 
   const  hourlydata = useSelector((store)=>store.credential.hourly)
+  
 
 const temp = hourlydata.slice(0,9)
 const labels = temp.map((e)=>time1(e.dt))
@@ -74,8 +75,12 @@ const data = {
   ],
 };
 
-  return  <div style={{ margin:"auto", height:"400px", width:"800px" ,marginTop:"10px", marginBottom:"70px"}} >
-    <h1>{temp[0]?.temp}°C</h1>
+  return  <div style={{ margin:"auto", height:"400px", width:"800px" ,marginTop:"10px", marginBottom:"170px"}} >
+    <div style={{display:"flex", justifyContent:"space-between" }}>
+    <div><h1>Pressure</h1>
+    <h1>{temp[0]?.pressure}</h1></div><div><h1>Humidity</h1>
+    <h1 >{temp[0]?.humidity}</h1></div>
+    </div>
     <Line 
      options={options} data={data} />;
      </div> 
