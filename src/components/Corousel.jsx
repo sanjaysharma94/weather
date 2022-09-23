@@ -2,6 +2,9 @@ import '../App.css'
 
 import {  useSelector } from "react-redux"
 import { DateTime } from 'luxon'
+import cloud from "../IconFiles/clouds.png"
+import rain from "../IconFiles/rain.png"
+import sun from "../IconFiles/sun.png"
 
 
 
@@ -9,8 +12,6 @@ export const Slider = () => {
  
 
 const  data = useSelector((store)=>store.credential.forecast)
-
-
          
 let time = (tm)=>{
 
@@ -37,7 +38,8 @@ let time = (tm)=>{
             <p style={{ marginTop: 0.5, marginBottom: 0.5 }}>{time(e.dt)}</p>
            
             <p style={{ marginTop: 0.5, marginBottom: 0 }}>{e.temp.day}°C</p>
-            <img className="day"
+            <img 
+            src= {e.weather[0].main==="Clear"?sun : e.weather[0].main==="Rain" ? rain :cloud}
               style={{
                 width: "100%",
                 height: "50%",
@@ -47,7 +49,7 @@ let time = (tm)=>{
              
               alt="ram"
             />
-            <h4 style={{ marginTop: 0 , marginBottom: 0 }}>clear</h4>
+            <h4 style={{ marginTop: 0 , marginBottom: 0 }}>{e.weather[0].main}</h4>
           </div>
         ))}
       
