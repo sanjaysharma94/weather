@@ -22,7 +22,7 @@ let time = (tm)=>{
 
     
   return (
-    <div style={{ margin:"auto",  display:"flex", gap:"20px", flexFlow:'nowrap', width:"47%",overflowX:"scroll"}} >
+    <div style={{ margin:"auto",  display:"flex", gap:"20px", flexFlow:'nowrap', width:"46%",overflowX:"scroll"}} >
       
         {data.map((e) => (
           <div
