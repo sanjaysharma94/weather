@@ -75,7 +75,7 @@ const data = {
 };
 
   return  <div style={{ margin:"auto", height:"400px", width:"800px" ,marginTop:"10px", marginBottom:"70px"}} >
-    <h1 >{temp[0]?.temp}</h1>
+    <h1>{temp[0]?.temp}°C</h1>
     <Line 
      options={options} data={data} />;
      </div> 
