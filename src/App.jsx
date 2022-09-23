@@ -101,6 +101,7 @@ let Id = useRef();
      {city && <h3>{city}</h3>}
 
     <Slider></Slider>
+    
     <TempArea/>
     <Map/>
     
