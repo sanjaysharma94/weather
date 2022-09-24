@@ -66,7 +66,7 @@ export function SunRise() {
 
   const  currentdata = useSelector((store)=>store.credential.current)
 
- const labels = ["sunrise" ,"sunset"]
+ const labels = ["sunrise","sunset"]
  const data = {
     labels ,
    datasets: [
