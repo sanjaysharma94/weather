@@ -1,7 +1,7 @@
 .App {
   text-align: center;
   height: 1000px;
-  background-color: "blue";
+  
 }
 
 .App-logo {
@@ -50,5 +50,7 @@ input{
   font-weight: bold;
   font-size: large;
 }
+
+
 
 

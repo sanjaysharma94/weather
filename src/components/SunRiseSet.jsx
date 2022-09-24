@@ -52,7 +52,7 @@ export function SunRise() {
   let time1 = (tm)=>{
 
   
-    return (DateTime.fromSeconds(tm).toFormat("hh"))
+    return (DateTime.fromSeconds(tm).toFormat("hh.mm"))
   
   };
 
@@ -66,7 +66,7 @@ export function SunRise() {
 
   const  currentdata = useSelector((store)=>store.credential.current)
 
- const labels = ["sunrise" , "sunset"]
+ const labels = ["sunrise" ,"sunset"]
  const data = {
     labels ,
    datasets: [

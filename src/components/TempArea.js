@@ -61,6 +61,7 @@ export function TempArea() {
   
 
 const temp = hourlydata.slice(0,9)
+
 const labels = temp.map((e)=>time1(e.dt))
 const data = {
   labels,
@@ -82,6 +83,6 @@ const data = {
     <h2 >{temp[0]?.humidity}</h2></div>
     </div>
     <Line 
-     options={options} data={data} />;
+     options={options} data={data} />
      </div> 
 }
