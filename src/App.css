@@ -1,6 +1,8 @@
 .App {
   text-align: center;
-  height: 1000px;
+ width: 60%;
+ margin: auto;
+ box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
   
 }
 
@@ -41,14 +43,15 @@
 
 
 input{
-  width: 400px;
-  height: 30px;
+  width: 600px;
+  height: 50px;
   border-radius: 5px;
-  border: 2px outset black;
+  border: 2px outset ;
   margin-bottom: 20px;
   padding: 10px;
   font-weight: bold;
   font-size: large;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
 }
 
 

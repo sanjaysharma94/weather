@@ -76,7 +76,7 @@ const data = {
   ],
 };
 
-  return  <div style={{ margin:"auto", height:"400px", width:"800px" ,marginTop:"10px", marginBottom:"170px"}} >
+  return  <div style={{ margin:"auto", height:"550px", width:"820px" ,marginTop:"10px", marginBottom:"170px", boxShadow: "rgba(0, 0, 0, 0.16) 0px 1px 4px"}} >
     <div style={{display:"flex", justifyContent:"space-between" }}>
     <div><h2>Pressure</h2>
     <h2>{temp[0]?.pressure}</h2></div><div><h2>Humidity</h2>
