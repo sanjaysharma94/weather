@@ -110,6 +110,7 @@ let Id = useRef();
     <Slider></Slider>
     
     <TempArea/>
+    
     <SunRise/>
     <Map/>
     
